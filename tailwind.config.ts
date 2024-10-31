@@ -9,8 +9,10 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      // Define new animations and keyframes
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        "border-move": "borderMove 3s linear infinite", // Moving border animation
       },
       keyframes: {
         spotlight: {
@@ -23,13 +25,26 @@ const config: Config = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        // Keyframe for moving border animation
+        borderMove: {
+          "0%": {
+            "background-position": "0% 50%",
+          },
+          "100%": {
+            "background-position": "100% 50%",
+          },
+        },
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundSize: {
+        "200%": "200%", // Ensures the background can move smoothly across the button
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
