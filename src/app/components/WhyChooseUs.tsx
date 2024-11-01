@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import Image from "next/image";
 
-const content = [
+const musicSchoolAcademy = [
   {
     title: "Expert Instructors",
     description:
@@ -33,7 +34,7 @@ const content = [
 const WhyChooseUs = () => {
   return (
     <div>
-      <StickyScroll content={content} />
+      <StickyScroll content={musicSchoolAcademy} />
     </div>
   );
 };
