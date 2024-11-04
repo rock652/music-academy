@@ -12,7 +12,9 @@ const config: Config = {
       // Define new animations and keyframes
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
-        "border-move": "borderMove 3s linear infinite", // Moving border animation
+        "border-move": "borderMove 3s linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite", // Moving border animation
       },
       keyframes: {
         spotlight: {
@@ -23,6 +25,11 @@ const config: Config = {
           "100%": {
             opacity: "1",
             transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
           },
         },
         // Keyframe for moving border animation
