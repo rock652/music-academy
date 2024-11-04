@@ -5,6 +5,7 @@ import FeaturedCourses from "./components/FeaturedCourses";
 import WhyChooseUs from "./components/WhyChooseUs";
 import TestimonialCard from "./components/TestimonialCard";
 import UpcomingWebinar from "./components/UpcomingWebinar";
+import Instructor from "./components/Instructor";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <WhyChooseUs />
       <TestimonialCard />
       <UpcomingWebinar />
+      <Instructor />
     </main>
   );
 }
